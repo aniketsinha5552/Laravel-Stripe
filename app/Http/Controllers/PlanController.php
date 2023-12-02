@@ -65,6 +65,7 @@ class PlanController extends Controller
     }
 
     public function unsubscribe(Request $request){
+        $base_url = env('HOST_URL');
         $plan = Plan::find($request->plan);
         $user = User::find($request->user_id);
         $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET',""));

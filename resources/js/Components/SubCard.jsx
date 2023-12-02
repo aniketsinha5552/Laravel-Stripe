@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 const SubCard = ({ tier, user, currPlan }) => {
 
+   const disableButton = (currPlan?.id!=0 && tier?.id!=currPlan?.id)
+
     const changeSub = async () => {
         if(currPlan?.id==tier?.id){
           let res = await axios.post("/unsubscribe", {
@@ -20,7 +22,7 @@ const SubCard = ({ tier, user, currPlan }) => {
 
     };
     return (
-        <div className="bg-slate-600 rounded-lg p-10 m-10 text-white text-center flex flex-col gap-10 w-64">
+        <div className="bg-slate-600 rounded-lg p-10 m-10 text-white text-center flex flex-col gap-10 w-72 flex-wrap">
             <h1 className="text-2xl font-bold text-orange-400">{tier.name}</h1>
             <h2 className="text-xl">
                 &#8377; {tier.price} <span className="text-sm">/ month</span>
@@ -28,6 +30,8 @@ const SubCard = ({ tier, user, currPlan }) => {
             <p>{tier?.desc}</p>
             <button
                 onClick={changeSub}
+                disabled={disableButton}
+                style={{background:disableButton && "gray"}}
                 className="mt-2 rounded-md p-2 bg-blue-600 hover:bg-blue-500"
             >
                 {currPlan?.id==tier?.id ? "Unsubscribe" : "Subscribe"}
