@@ -47,7 +47,7 @@ class PlanController extends Controller
                     'name'=> $plan->name,
                     'description'=> $plan->desc,
                     ],
-                    'unit_amount'=> $plan->price,
+                    'unit_amount'=> (int)$plan->price*100,
                     'recurring'=> [
                     'interval'=> "month"
                 ]
