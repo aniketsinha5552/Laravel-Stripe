@@ -28,11 +28,13 @@ class PlanController extends Controller
     public function subscribe(Request $request){
         $plan = Plan::find($request->plan);
         $user = User::find($request->user_id);
+
+        $base_url = env('HOST_URL');
         
         $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET',""));
         $session = $stripe->checkout->sessions->create([
-            'success_url' => 'http://localhost:8000/dashboard',
-            'cancel_url'=> 'http://localhost:8000/dashboard',
+            'success_url' => $base_url.'/dashboard',
+            'cancel_url'=>  $base_url.'/dashboard',
             'payment_method_types'=> ["card"],
             'mode'=> "subscription",
             'billing_address_collection'=> "auto",
@@ -74,7 +76,7 @@ class PlanController extends Controller
 
         $session = $stripe->billingPortal->sessions->create([
             'customer'=> $sub['stripe_customer'],
-            'return_url'=> 'http://localhost:8000/dashboard'
+            'return_url'=>  $base_url.'/dashboard'
         ]);
         return $session;
 
