@@ -1,3 +1,17 @@
+# Laravel Subscription App
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+## Demo
+https://github.com/aniketsinha5552/Laravel-Stripe/assets/104712880/d4da0f95-6d7e-41ff-b626-03b32b58db39
+
+## Local Setup
+- Clone repo: run `git clone https://github.com/aniketsinha5552/Laravel-Stripe.git`
+- Composer: install composer and in the project root folder run `composer install`
+- DB seeding: `php artisan db:seed`
+- Environment variables: create a new `.env` file and copy from `.env.example` into it. Get the stripe API keys and paste in the `.env`
+- Start: Now run `php artisan serve` and `npm run dev` to start the backend and the frontend
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
