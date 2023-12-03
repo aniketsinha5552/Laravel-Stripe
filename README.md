@@ -1,5 +1,6 @@
 # Laravel Subscription App
 ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+## A Laravel app with multi tier subscription model using Stripe
 ## Demo
 https://github.com/aniketsinha5552/Laravel-Stripe/assets/104712880/d4da0f95-6d7e-41ff-b626-03b32b58db39
 
