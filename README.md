@@ -6,6 +6,7 @@ https://github.com/aniketsinha5552/Laravel-Stripe/assets/104712880/d4da0f95-6d7e
 ## Local Setup
 - Clone repo: run `git clone https://github.com/aniketsinha5552/Laravel-Stripe.git`
 - Composer: install composer and in the project root folder run `composer install`
+- Node modules: run `npm install`
 - DB seeding: `php artisan db:seed`
 - Environment variables: create a new `.env` file and copy from `.env.example` into it. Get the stripe API keys and paste in the `.env`
 - Start: Now run `php artisan serve` and `npm run dev` to start the backend and the frontend
